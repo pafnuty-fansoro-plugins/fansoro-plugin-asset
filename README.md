@@ -1,6 +1,6 @@
 # Asset Plugin for [Morfy CMS](http://morfy.org/)
 
-![version](https://img.shields.io/badge/version-1.0.0-brightgreen.svg?style=flat-square "Version")
+![version](https://img.shields.io/badge/version-1.1.0-brightgreen.svg?style=flat-square "Version")
 ![DLE](https://img.shields.io/badge/Morfy-1.1.3+-green.svg?style=flat-square "Morfy Version")
 [![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/pafnuty/morfy-plugin-asset/blob/master/LICENSE)
 
@@ -19,7 +19,7 @@ The plugin to automatically connect CSS and JS files in the site template.
 See [this instruction](http://morfy.org/documentation/plugins/plugins-installation)
 
 
-## Config
+## Default config
 
 ```yml
 # Prefix of files to exclude
@@ -45,7 +45,7 @@ excludes:
 
 ```smarty
 <!-- In Template:  -->
-{Action::run('asset_folder')}
+{Morfy::runAction('asset_folder')}
 
 <!-- In Browser: -->
 <link rel="stylesheet" href="/themes/default/assets/css/bootstrap.min.css?v=1447304405">
@@ -61,14 +61,14 @@ excludes:
 ### In Template
 ```smarty
 <!-- css -->
-{Action::run('asset_folder', [['/assets/css/']])}
-{Action::run('asset_file', ['/assets/css/hljs/zenburn.css'])}
+{Morfy::runAction('asset_folder', [['/assets/css/']])}
+{Morfy::runAction('asset_file', ['/assets/css/hljs/zenburn.css'])}
 <!-- /css -->
 ...
 <!-- js -->
-{Action::run('asset_folder', [['/assets/js/'], ['main']])}
-{Action::run('asset_file', ['/assets/js/myasyncfile.js', 'async defer class="async-file"'])}
-{Action::run('asset_file', ['/assets/js/main.js'])}
+{Morfy::runAction('asset_folder', [['/assets/js/'], ['main']])}
+{Morfy::runAction('asset_file', ['/assets/js/myasyncfile.js', 'async defer class="async-file"'])}
+{Morfy::runAction('asset_file', ['/assets/js/main.js'])}
 <!-- /js -->
 ```
 

@@ -5,21 +5,21 @@
  *  @package Morfy
  *  @subpackage Plugins
  *  @author Pavel Belousov / pafnuty
- *  @version 1.0.0
+ *  @version 1.1.0
  *  @license https://github.com/pafnuty/morfy-plugin-asset/blob/master/LICENSE MIT
  */
 
 require_once PLUGINS_PATH . '/asset/asset.class.php';
 
-Action::add('asset_folder', function (array $folders = array(), array $excludes = array()) {
+Morfy::addAction('asset_folder', function (array $folders = array(), array $excludes = array()) {
 
-	$assetConfig = Config::get('plugins.asset');
+	$assetConfig = Morfy::$plugins['asset'];
 
 	$folders  = array_unique(array_filter(array_merge($folders, (array) $assetConfig['folders'])));
 	$excludes = array_unique(array_filter(array_merge($excludes, (array) $assetConfig['excludes'])));
 
 	foreach ($folders as $k => $folder) {
-		$folders[$k] = '/themes/' . Config::get('system.theme') . $folder;
+		$folders[$k] = '/themes/' . Morfy::$site['theme'] . $folder;
 	}
 
 	Asset::add(
@@ -28,10 +28,10 @@ Action::add('asset_folder', function (array $folders = array(), array $excludes 
 	);
 });
 
-Action::add('asset_file', function ($fileName = '', $attributes = '') {
+Morfy::addAction('asset_file', function ($fileName = '', $attributes = '') {
 
 	if ($fileName != '') {
-		$fileName = '/themes/' . Config::get('system.theme') . $fileName;
+		$fileName = '/themes/' . Morfy::$site['theme'] . $fileName;
 		Asset::addFile(
 			$fileName,
 			$attributes
