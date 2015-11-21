@@ -11,7 +11,7 @@
 
 require_once PLUGINS_PATH . '/asset/asset.class.php';
 
-Morfy::addAction('asset_folder', function (array $folders = array(), array $excludes = array()) {
+Action::add('asset_folder', function (array $folders = array(), array $excludes = array()) {
 
 	$assetConfig = Morfy::$plugins['asset'];
 
@@ -28,7 +28,7 @@ Morfy::addAction('asset_folder', function (array $folders = array(), array $excl
 	);
 });
 
-Morfy::addAction('asset_file', function ($fileName = '', $attributes = '') {
+Action::add('asset_file', function ($fileName = '', $attributes = '') {
 
 	if ($fileName != '') {
 		$fileName = '/themes/' . Morfy::$site['theme'] . $fileName;
