@@ -5,7 +5,7 @@
  *  @package Morfy
  *  @subpackage Plugins
  *  @author Pavel Belousov / pafnuty
- *  @version 1.1.0
+ *  @version 2.0.0
  *  @license https://github.com/pafnuty/morfy-plugin-asset/blob/master/LICENSE MIT
  */
 
