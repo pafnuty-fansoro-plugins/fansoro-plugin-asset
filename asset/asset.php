@@ -2,24 +2,24 @@
 /**
  *  Asset Plugin
  *
- *  @package Morfy
+ *  @package Fansoro
  *  @subpackage Plugins
  *  @author Pavel Belousov / pafnuty
- *  @version 2.0.0
- *  @license https://github.com/pafnuty/morfy-plugin-asset/blob/master/LICENSE MIT
+ *  @version 2.1.0
+ *  @license https://github.com/pafnuty/fansoro-plugin-asset/blob/master/LICENSE MIT
  */
 
 require_once PLUGINS_PATH . '/asset/asset.class.php';
 
 Action::add('asset_folder', function (array $folders = array(), array $excludes = array()) {
 
-	$assetConfig = Morfy::$plugins['asset'];
+	$assetConfig = Fansoro::$plugins['asset'];
 
 	$folders  = array_unique(array_filter(array_merge($folders, (array) $assetConfig['folders'])));
 	$excludes = array_unique(array_filter(array_merge($excludes, (array) $assetConfig['excludes'])));
 
 	foreach ($folders as $k => $folder) {
-		$folders[$k] = '/themes/' . Morfy::$site['theme'] . $folder;
+		$folders[$k] = '/themes/' . Fansoro::$site['theme'] . $folder;
 	}
 
 	Asset::add(
@@ -31,7 +31,7 @@ Action::add('asset_folder', function (array $folders = array(), array $excludes 
 Action::add('asset_file', function ($fileName = '', $attributes = '') {
 
 	if ($fileName != '') {
-		$fileName = '/themes/' . Morfy::$site['theme'] . $fileName;
+		$fileName = '/themes/' . Fansoro::$site['theme'] . $fileName;
 		Asset::addFile(
 			$fileName,
 			$attributes

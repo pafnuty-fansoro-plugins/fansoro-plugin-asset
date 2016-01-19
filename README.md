@@ -1,8 +1,8 @@
-# Asset Plugin for [Morfy CMS](http://morfy.org/)
+# Asset Plugin for [Fansoro CMS](http://fansoro.org/)
 
-![version](https://img.shields.io/badge/version-2.0.0-brightgreen.svg?style=flat-square "Version")
-![DLE](https://img.shields.io/badge/Morfy-2.x-green.svg?style=flat-square "Morfy Version")
-[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/pafnuty/morfy-plugin-asset/blob/master/LICENSE)
+![version](https://img.shields.io/badge/version-2.1.0-brightgreen.svg?style=flat-square "Version")
+![Fansoro](https://img.shields.io/badge/Fansoro-2.x-green.svg?style=flat-square "Fansoro Version")
+[![MIT License](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/pafnuty/fansoro-plugin-asset/blob/master/LICENSE)
 
 The plugin to automatically connect CSS and JS files in the site template.
 
@@ -16,7 +16,7 @@ The plugin to automatically connect CSS and JS files in the site template.
 
 
 ## Install & Configuration
-See [this instruction](http://morfy.org/documentation/plugins/plugins-installation)
+See [this instruction](http://fansoro.org/documentation/plugins/plugins-installation)
 
 
 ## Config
@@ -91,4 +91,4 @@ excludes:
 
 
 ## License 
-[MIT](https://github.com/pafnuty/morfy-less/blob/master/LICENSE)
+[MIT](https://github.com/pafnuty/fansoro-less/blob/master/LICENSE)
